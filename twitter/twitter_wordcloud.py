@@ -13,8 +13,6 @@ def authenticate():
 
 def get_all_tweets(api):
     user_handle = input("Enter twitter handle of user: ")
-#    user = api.get_user(user_handle)
-#    print("User: " + str(user))
     all_tweets = api.user_timeline(screen_name=str(user_handle), count=4)
     return all_tweets
 
@@ -30,7 +28,6 @@ def make_wordcloud(all_tweets):
 def main():
     api = authenticate()
     all_tweets = get_all_tweets(api)
-#    print(all_tweets)
     make_wordcloud(all_tweets)
 
 if __name__ == "__main__":
