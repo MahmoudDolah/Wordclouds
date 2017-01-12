@@ -2,13 +2,15 @@
 Finds the most common words in a users tweets and outputs it as a word cloud. 
 This script parses out urls and other url related phrases.  
 
-Run the program by typing                 
+First, get access to twitter's API and insert the credentials into the proper place in the authenticate function. 
+
+Second, run the program by typing                 
 ```
 python3 twitter_wordcloud.py
 ```             
 into a terminal. 
 
-Simply enter the user's screen name when you see               
+Finally, simply enter the user's screen name when you see               
 ```
 Enter twitter handle of user:
 ```             
