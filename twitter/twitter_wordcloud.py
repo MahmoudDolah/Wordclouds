@@ -4,14 +4,13 @@
 import matplotlib.pyplot as pylt
 from wordcloud import WordCloud
 import tweepy
-import auth_keys
 URL_WORDS = ["http", "https", "com/", "io/", "co", "amp"]
 
 
 def authenticate():
     """Handles authentication with twitter API. Returns api object."""
-    auth = tweepy.OAuthHandler(auth_keys.consumer_key, auth_keys.consumer_secret)
-    auth.set_access_token(auth_keys.access_token, auth_keys.access_token_secret)
+    auth = tweepy.OAuthHandler("INSERT CONSUMER KEY","INSERT CONSUMER SECRET")
+    auth.set_access_token("INSERT ACCESS TOKEN", "INSERT ACCESS TOKEN SECRET")
     api = tweepy.API(auth)
     return api
 
