@@ -1,4 +1,5 @@
 #! /usr/bin/env python3
+"""A script that gets a wikipedia article and makes a word cloud of the text in it"""
 import random
 import itertools
 import wikipedia
@@ -6,6 +7,7 @@ import matplotlib.pyplot as pylt
 from wordcloud import WordCloud
 
 def search_wikipedia():
+    """Searches Wikipedia for term specified by user and returns a page object"""
     lookup = input("Enter search item: ")
     if lookup == '':
         rand_num = random.randrange(14)
@@ -18,6 +20,7 @@ def search_wikipedia():
     return page
 
 def make_cloud(text):
+    """Makes word cloud. Takes in a string."""
     cloud = WordCloud().generate(text)
     pylt.imshow(cloud)
     pylt.axis("off")
