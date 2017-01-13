@@ -38,12 +38,9 @@ def make_word_cloud(all_tweets):
     pylt.axis("off")
     pylt.show()
 
-def main():
+if __name__ == "__main__":
     api = authenticate()
     all_tweets = get_all_tweets(api)
     parsed_tweets = parse_out_urls(all_tweets)
     make_word_cloud(parsed_tweets)
-
-if __name__ == "__main__":
-    main()
     

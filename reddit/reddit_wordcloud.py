@@ -21,11 +21,8 @@ def make_wordcloud(comments):
     pylt.axis("off")
     pylt.show()
     
-def main():
+if __name__ == "__main__":
     r = praw.Reddit(user_agent="Get User and make wordcloud of comments")
     user = get_user(r)
     comments = get_comments(user)
     make_wordcloud(comments)
-    
-if __name__ == "__main__":
-    main()
