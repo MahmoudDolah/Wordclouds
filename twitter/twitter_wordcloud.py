@@ -4,7 +4,7 @@
 import matplotlib.pyplot as pylt
 from wordcloud import WordCloud
 import tweepy
-URL_WORDS = ["http", "https", "com/", "io/", "co", "amp"]
+URL_WORDS = ["http", "https", "com/", "io/", "co", "amp", "rt"]
 
 
 def authenticate():
